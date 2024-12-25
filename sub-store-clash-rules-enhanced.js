@@ -203,21 +203,21 @@ function addRules(params) {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-            path: "./ruleset/custom/reject.yaml",
+            path: "/.config/clash/ruleset/custom/reject.yaml",
             interval: 86400
         },
         direct: {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
-            path: "./ruleset/custom/direct.yaml",
+            path: "/.config/clash/ruleset/custom/direct.yaml",
             interval: 86400
         },
         proxy: {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
-            path: "./ruleset/custom/proxy.yaml",
+            path: "/.config/clash/ruleset/custom/proxy.yaml",
             interval: 86400
         },
         icloud: {
@@ -245,77 +245,77 @@ function addRules(params) {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt",
-            path: "./ruleset/custom/private.yaml",
+            path: "/.config/clash/ruleset/custom/private.yaml",
             interval: 86400
         },
         gfw: {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
-            path: "./ruleset/custom/gfw.yaml",
+            path: "/.config/clash/ruleset/custom/gfw.yaml",
             interval: 86400
         },
         greatfire: {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt",
-            path: "./ruleset/custom/greatfire.yaml",
+            path: "/.config/clash/ruleset/custom/greatfire.yaml",
             interval: 86400
         },
         "tld-not-cn": {
             type: "http",
             behavior: "domain",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt",
-            path: "./ruleset/custom/tld-not-cn.yaml",
+            path: "/.config/clash/ruleset/custom/tld-not-cn.yaml",
             interval: 86400
         },
         telegramcidr: {
             type: "http",
             behavior: "ipcidr",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
-            path: "./ruleset/custom/telegramcidr.yaml",
+            path: "/.config/clash/ruleset/custom/telegramcidr.yaml",
             interval: 86400
         },
         cncidr: {
             type: "http",
             behavior: "ipcidr",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt",
-            path: "./ruleset/custom/cncidr.yaml",
+            path: "/.config/clash/ruleset/custom/cncidr.yaml",
             interval: 86400
         },
         lancidr: {
             type: "http",
             behavior: "ipcidr",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt",
-            path: "./ruleset/custom/lancidr.yaml",
+            path: "/.config/clash/ruleset/custom/lancidr.yaml",
             interval: 86400
         },
         applications: {
             type: "http",
             behavior: "classical",
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
-            path: "./ruleset/custom/applications.yaml",
+            path: "/.config/clash/ruleset/custom/applications.yaml",
             interval: 86400
         },
         openai: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
-            path: "./ruleset/custom/openai.yaml",
+            path: "/.config/clash/ruleset/custom/openai.yaml",
             interval: 86400
         },
         claude: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
-            path: "./ruleset/custom/claude.yaml",
+            path: "/.config/clash/ruleset/custom/claude.yaml",
             interval: 86400
         },
         spotify: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml",
-            path: "./ruleset/custom/spotify.yaml",
+            path: "/.config/clash/ruleset/custom/spotify.yaml",
             interval: 86400
         }
     };
@@ -542,8 +542,4 @@ function getManualProxiesByRegex(params, regex) {
 }
 
 // 导出
-$export = {
-    name: "Sub Store Rules",
-    type: "rule",
-    main: main
-};
+module.exports = { main };
