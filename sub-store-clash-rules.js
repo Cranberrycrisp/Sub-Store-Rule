@@ -542,4 +542,8 @@ function getManualProxiesByRegex(params, regex) {
 }
 
 // 导出
-module.exports = { main };
+$export = {
+    name: "Sub Store Rules",
+    type: "rule",
+    main: main
+};
